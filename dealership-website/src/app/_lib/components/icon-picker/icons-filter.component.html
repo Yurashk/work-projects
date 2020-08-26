@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 ">
+      <h3>Choose The Icon</h3>
+      <label for="inp" class="inp">
+        <input #box (keyup)="filter(box.value)" type="text" id="inp" placeholder="&nbsp;">
+        <span class="label">Search...</span>
+        <span class="border"></span>
+        <i *ngIf="lastChosenItem" class="material-icons">
+          {{lastChosenItem}}
+        </i>
+      </label>
+      <div class="result mt-1">
+        <i *ngFor="let icon of iconsFilter" (click)="lastChosenItem = icon;" class="material-icons">
+          {{icon}}
+        </i>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

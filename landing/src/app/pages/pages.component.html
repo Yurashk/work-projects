@@ -1,0 +1,116 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+
+  <a class="navbar-brand m-0 p-0 mr-4" routerLink="/">
+    <img src="/assets/img/logo/main-logo.svg" alt="Logo">
+  </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+        <a class="nav-link" routerLink="/">Home</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/integration">Integration</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" routerLinkActive="active">Solutions</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <a class="dropdown-item" routerLink="/test-drive">VIP Test Drive</a>
+          <a class="dropdown-item" routerLink="/tech-overview">Technology Overview</a>
+          <!--<a class="dropdown-item" href="#">Something else here</a>-->
+        </div>
+      </li>
+    </ul>
+    <div class="form-inline my-2 my-lg-0">
+      <a class="btn btn-outline-success my-2 my-sm-0" href="https://app.testdrive.pw">Login</a>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<!--<footer class="text-muted background-color__light-grey">-->
+  <!--<div class="container">-->
+    <!--<p class="float-right">-->
+      <!--<a href="#">Back to top</a>-->
+    <!--</p>-->
+    <!--<p>Joint Venture Digital, 78206 Varner Road, Suite D, Palm Desert, CA, 92211, United States 760-469-9296</p>-->
+    <!--<p>Interested ? <a href="https://www.jointventuredigital.com/">Visit the homepage</a> or read our <a-->
+      <!--href="javascript:void(0)">Contact us</a>.</p>-->
+  <!--</div>-->
+<!--</footer>-->
+
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <footer class="container footer py-5">
+    <div class="row">
+      <div class="col-6 col-md">
+        <div class="d-flex align-items-end mb-3">
+          <div class="mr-1">
+            <img src="/assets/img/logo/main-logo-black.svg" style="height: 32px;">
+          </div>
+          <!--<span class="font-weight-500">VIPdrv</span>-->
+        </div>
+        <p>
+          <!--<a href="https://github.com/elrondsoft" target="_blank">-->
+            <!--<img class="social-icon" src="/assets/img/social-icons/github-logo.svg">-->
+          <!--</a>-->
+          <!--<a href="https://www.linkedin.com/company/elrondsoft" target="_blank">-->
+            <!--<img class="social-icon" src="/assets/img/social-icons/linkedin.svg">-->
+          <!--</a>-->
+          <a href="https://www.facebook.com/VIPdrvTestDrive" target="_blank">
+            <img class="social-icon" src="/assets/img/social-icons/facebook.svg">
+          </a>
+          <a href="https://twitter.com/VIPdrv" target="_blank">
+            <img class="social-icon" src="/assets/img/social-icons/twitter.svg">
+          </a>
+        </p>
+        <!--<small class="d-block mb-3">powered by <i> <a href="https://github.com/ultramarine256" target="_blank">ultramarine256</a></i></small>-->
+        <small class="d-block mb-3 text-muted">© 2017-2019</small>
+      </div>
+      <!--            <div class="col-6 col-md">-->
+      <!--                <h5>Features</h5>-->
+      <!--                <ul class="list-unstyled text-small">-->
+      <!--                    <li><a class="text-muted" href="#">Cool stuff</a></li>-->
+      <!--                    <li><a class="text-muted" href="#">Random feature</a></li>-->
+      <!--                    <li><a class="text-muted" href="#">Team feature</a></li>-->
+      <!--                    <li><a class="text-muted" href="#">Stuff for developers</a></li>-->
+      <!--                    <li><a class="text-muted" href="#">Another one</a></li>-->
+      <!--                    <li><a class="text-muted" href="#">Last time</a></li>-->
+      <!--                </ul>-->
+      <!--            </div>-->
+      <div class="col-6 col-md">
+        <h5>Contacts</h5>
+        <ul class="list-unstyled text-small">
+          <li class="text-muted">support@vipdrv.com</li>
+          <li class="text-muted">+1 (760) 469-9296</li>
+          <!--                    <li><a class="text-muted" href="#">Another resource</a></li>-->
+          <!--                    <li><a class="text-muted" href="#">Final resource</a></li>-->
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Navigation</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" routerLink="/">Home</a></li>
+          <li><a class="text-muted" routerLink="/integration">Integration</a></li>
+          <!--<li><a class="text-muted" href="/about-us">About Us</a></li>-->
+          <!--<li><a class="text-muted" href="/our-work">Our Work</a></li>-->
+          <!--<li><a class="text-muted" href="/contact-us">Contact Us</a></li>-->
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Solutions</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="/test-drive">VIP Test Drive</a></li>
+          <li><a class="text-muted" href="/tech-overview">Technology Overview</a></li>
+          <!--<li><a class="text-muted" href="/services">Mobile Solutions</a></li>-->
+          <!--<li><a class="text-muted" href="/services">Automotive</a></li>-->
+          <!--<li><a class="text-muted" href="/services">DevOps Practices</a></li>-->
+        </ul>
+      </div>
+    </div>
+  </footer>
+</footer>

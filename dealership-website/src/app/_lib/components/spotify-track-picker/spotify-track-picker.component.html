@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row ">
+    <div class="col-md-4 search-block-container bg-light text-dark text-left">
+      <h4>Music</h4>
+      <p>make your own playlist</p>
+      <div>
+        <i class="material-icons icon-search">
+          search
+        </i>
+        <input #myInput [(ngModel)]="inputValue" class="input-song" (input)="filterItem(myInput.value)"
+               type="search" placeholder="Search for music">
+      </div>
+      <div *ngIf="songs && inputValue" class="search-block ">
+        <ul class="text-left list-of-artists bg-light border">
+          <li *ngFor="let item of songs.tracks.items;let i=index" class="list-text ">
+            <div class="d-flex">
+              <img *ngIf="item.album.images.length > 0" src="{{item.album.images[0].url}}" width="35px" height="35px"
+                   alt="">
+              <p class="song-description pl-2">{{item.name}}</p>
+            </div>
+            <div *ngIf="item.album.images.length===0 ">
+              <div width="50px" height="50px" style="background-color: #E7E7E7">
+
+              </div>
+            </div>
+            <div class="btn btn-select-song"
+                 (click)="onSelectSong(item.artists[0].name,item.name,item.id,item.album.images[0].url);selectedIndex($event)">
+
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="search-block2 ">
+        <ol *ngIf="tracks && !inputValue" class="list-of-chosen-artists mt-0">
+          <li *ngFor="let track of tracks" class="list-text2 text-left mt-2 border-bottom">
+            <div class="d-flex">
+              <img *ngIf="track.songImg" src="{{track.songImg}}" class="mr-1" width="35px" height="35px"
+                   alt="">
+              <div>{{track.name}}:<br><i>{{track.song}}</i></div>
+            </div>
+            <div class="btn btn-delete p-0" (click)="deleteTrack(track.songId)">
+              <i class="material-icons-outlined" style="color:darkred">
+                delete
+              </i>
+            </div>
+          </li>
+        </ol>
+        <div *ngIf="tracks && tracks.length>0 && !inputValue" class="btn btn-info p-1 align-center "
+             (click)="Tracks_done()">
+          done
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

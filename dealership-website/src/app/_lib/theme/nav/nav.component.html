@@ -1,0 +1,7 @@
+<!-- <app-vehicles-list></app-vehicles-list> -->
+<div class="container">
+  <div class="nav-row ">
+    <a  routerLink="{{item.url}}" (click)="show(item.url)" *ngFor="let item of menuItems"
+       class="nav-link">{{item.title}}</a>
+  </div>
+</div>

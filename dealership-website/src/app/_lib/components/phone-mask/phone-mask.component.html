@@ -1,0 +1,51 @@
+<form [formGroup]="form">
+  <div class="form-group">
+    <div class="d-flex">
+      <div class="flag-box m-0">
+        <div class="iti__flag" [ngClass]="'iti__'+countrySelected.iso2 "></div>
+        <i *ngIf="!isVisible" class="material-icons" (click)="isVisible=true">
+          arrow_drop_down
+        </i>
+        <i *ngIf="isVisible" class="material-icons" (click)="isVisible=false">
+          arrow_drop_up
+        </i>
+        <div>
+          +{{countrySelected.dialCode}}
+        </div>
+      </div>
+      <!--          <input type="phone"-->
+      <!--                 #phone="ngModel"-->
+      <!--                 name="phone"-->
+      <!--                 minlength="14"-->
+      <!--                 maxlength="60"-->
+      <!--                 [required]="stepData.phoneIsRequired"-->
+      <!--                 class="form-control shadow-sm"-->
+      <!--                -->
+      <!--                 (keyup)="phoneOnKey(); tooltipIsVisible = phone.valid && (phone.dirty || phone.touched);"-->
+      <!--                 [(ngModel)]="bookingUser.phone"-->
+      <!--                 [ngClass]="{'is-invalid': phone.invalid &&  phone.value && (phone.dirty || phone.touched),-->
+      <!--                             'is-valid': phone.valid && phone.value && (phone.dirty || phone.touched)}">-->
+      <input
+             type="text"
+             [(ngModel)]="phoneNumber"
+             formControlName="phone"
+             id="phoneNumber"
+             name="phonenumber"
+             (keyup)="phoneOnKey()"
+             placeholder="(555) 555-5555"
+             (keyup.enter)="submit(countrySelected.dialCode,phoneNumber,countrySelected.name)"
+             autocomplete="off">
+    </div>
+    <div *ngIf="isVisible" class="country-list d-flex flex-column">
+      <div *ngFor="let country of countriesFilter,index as i"
+           (click)="selectedCountry(country);phoneNumber=null"
+           class="container-flag ">
+        <div class="iti__flag mr-2" [ngClass]="'iti__'+country.iso2" [attr.id]="country.iso2">
+        </div>
+        {{country.name}}
+      </div>
+    </div>
+  </div>
+</form>
+
+

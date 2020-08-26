@@ -1,0 +1,23 @@
+.main-container {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.car-description {
+    min-height: 300px;
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    color: white;
+    background-color: darkcyan;
+    border-radius: 5px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.description-titles {
+    line-height: 1.2;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+}

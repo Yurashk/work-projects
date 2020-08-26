@@ -1,0 +1,148 @@
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: silver;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5a5a5a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.search-block-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  padding: 15px;
+  color: white;
+  letter-spacing: 0.5px;
+  background-color: brown;
+}
+
+.search-block {
+  position: relative;
+  height: 250px;
+  z-index: 2;
+}
+
+.list-of-artists {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  list-style: none;
+  line-height: 1;
+  font-size: 0.9em;
+  z-index: 2;
+  height: 250px;
+  overflow-y: scroll;
+}
+
+.input-song {
+  width: 100%;
+  border-radius: 5px;
+  font-size: 0.9em;
+  box-shadow: none;
+  margin-top: 0;
+}
+
+.list-of-chosen-artists {
+  position: relative;
+  list-style: none;
+  line-height: 1;
+  font-size: 0.9em;
+  border: 1px solid lightgray;
+
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.list-of-artists2 {
+  list-style: circle;
+}
+
+.list-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  cursor: pointer;
+  padding-top: 10px;
+}
+
+.list-text2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.add-song-btn {
+  align-self: flex-end;
+}
+
+.spinner {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: url("src/assets/img/ball-triangle.svg");
+  background-size: 100%;
+}
+
+.buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headphones {
+  width: 25px;
+  height: 25px;
+  background: url('src/assets/img/movie-player-play-button.svg');
+  background-size: cover;
+}
+
+.song-description {
+  font-size: 0.8em;
+  color: black;
+}
+
+.btn-select-song:before {
+  content: "+";
+  font-size:1.2em
+}
+
+.btn-add-song:before {
+  content: '\2713';
+}
+
+i.icon-search {
+  width: 20px;
+  height: 20px;
+  color: #DADADA;
+  line-height: 26px;
+  text-align: center;
+  margin-right: -26px;
+  position: relative;
+  z-index: 1;
+  float: left;
+}
+
+i.icon-search + input {
+  padding-left: 26px;
+}
+

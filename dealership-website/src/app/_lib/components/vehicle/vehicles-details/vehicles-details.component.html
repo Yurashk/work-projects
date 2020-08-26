@@ -1,0 +1,29 @@
+<div class="container ">
+    <div class="row main-container">
+        <div class="col-md-5 car-photo mb-5">
+            <div class="img  car-description">
+              <h1>Car-Description</h1>
+                <div *ngFor="let detail of details.externalImages">
+                    <div class="img p-0">
+                        <img src={{detail}} width="100%" height="100%" alt="car">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7 mb-5">
+            <div class="car-description">
+                <h5>Car #{{details.id}} Card</h5>
+                <h6 class="description-titles">
+                    Name:
+                </h6>
+                <p class="description-titles">{{details.title}}</p>
+                <h6 class="description-titles">Vin code:</h6>
+                <p class="description-titles">{{details.vin}}</p>
+                <h6 class="description-titles">Color:</h6>
+                <p class="description-titles">{{details.exteriorColor}}</p>
+
+
+            </div>
+        </div>
+    </div>
+<!--</div>-->

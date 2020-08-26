@@ -1,0 +1,24 @@
+<div class="container">
+
+    <div *ngIf="!articles">
+        <div class="spinner">
+
+        </div>
+    </div>
+
+    <div class="row mt-5">
+
+        <a *ngFor="let article of articles"  class="col-md-3 car-card-block mb-5">
+            <div class="car-card text-center" routerLink="{{article.id}}">
+                <h5>Car card #{{article.id}}</h5>
+                <p>
+                    auto:{{article.title}}
+                </p>
+                <p>
+                    vin:{{article.vin}}
+                </p>
+            </div>
+
+        </a>
+    </div>
+</div>
