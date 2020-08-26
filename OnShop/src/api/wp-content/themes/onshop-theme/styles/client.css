@@ -1,0 +1,181 @@
+/**
+* ------------------------------------------------------------------------
+* Hide Wordpress Footer
+* ------------------------------------------------------------------------
+*/
+
+#wpfooter {
+    display: none;
+}
+
+#footer-left {
+    display: none;
+}
+
+/**
+* ------------------------------------------------------------------------
+* Hide Redundat Menu Items
+* ------------------------------------------------------------------------
+*/
+
+#wp-admin-bar-comments,
+#wp-admin-bar-new-content,
+#wp-admin-bar-wp-logo,
+#dashboard_right_now,
+#dashboard_activity,
+#dashboard_primary,
+#screen-meta-links {
+    display: none !important;
+}
+
+li:nth-last-child(-n+2) {
+    color: red;
+}
+
+/**
+* ------------------------------------------------------------------------
+* Hide Preview Button
+* ------------------------------------------------------------------------
+*/
+
+#preview-action {
+    display: none;
+}
+
+/**
+* ------------------------------------------------------------------------
+* Hide Product Permalink
+* ------------------------------------------------------------------------
+*/
+
+#edit-slug-box {
+    display: none;
+}
+
+/**
+* ------------------------------------------------------------------------
+* Hide Product Preview Link
+* ------------------------------------------------------------------------
+*/
+
+.row-actions .view {
+    display: none;
+}
+
+/**
+* ------------------------------------------------------------------------
+* Hide Product Downloads Options
+* ------------------------------------------------------------------------
+*/
+
+#woocommerce-order-downloads {
+    display: none;
+}
+
+/**
+* ------------------------------------------------------------------------
+* Hide Profile link from Order
+* ------------------------------------------------------------------------
+*/
+
+#order_data .form-field.form-field-wide.wc-customer-user a:nth-child(2) {
+    display: none;
+}
+
+/**
+* ------------------------------------------------------------------------
+* Change WooCommerce Logo in Admin side menu
+* ------------------------------------------------------------------------
+*/
+
+#adminmenu #toplevel_page_woocommerce .menu-icon-generic div.wp-menu-image::before {
+    content: '\e01d';
+}
+
+/**
+* ------------------------------------------------------------------------
+* Remove WooCommerce link in onshop-api admin menu
+* ------------------------------------------------------------------------
+*/
+
+#wp-admin-bar-view-store {
+    display: none;
+}
+
+/**
+* ------------------------------------------------------------------------
+* Hide WP update message
+* ------------------------------------------------------------------------
+*/
+.update-nag {
+    display: none !important;
+}
+
+/**
+* ------------------------------------------------------------------------
+* Hide discount
+* ------------------------------------------------------------------------
+*/
+.wc-order-item-discount {
+    display: none !important;
+}
+
+.discount{
+    display: none !important;
+}
+
+
+/**
+ * Hide order actions
+ */
+/*#woocommerce-order-actions #actions {*/
+/*    display: none!important;*/
+/*}*/
+
+#list-table {
+    display: none!important;
+}
+
+#adminmenu #toplevel_page_wc-admin-path--analytics-revenue {
+    display: none!important;
+}
+
+#woocommerce-order-actions.hide-if-js {
+    display: block!important;
+}
+
+#woocommerce-order-actions #actions {
+    display: none!important;
+}
+
+#delete-action {
+    display: none!important;
+}
+
+#order_actions {
+    display: none!important;
+}
+
+#save-order {
+    width: 100%!important;
+}
+
+#adminmenu #toplevel_page_wc-admin-path--marketing {
+    display: none!important;
+}
+
+.woocommerce-order-data__meta.order_number {
+    display: none!important;
+}
+
+#wp-admin-bar-site-name {
+    display: none!important;
+}
+
+#menu-media {
+    display: none!important;
+}
+
+#redux_dashboard_widget {
+    display: none;
+}
